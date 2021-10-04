@@ -9,8 +9,9 @@ class MoviesController < ApplicationController
   def index
     @all_ratings = Movie.all_ratings
     @ratings_to_show = []
-    puts params[:ratings].inspect
     session[:ratings] = params[:ratings] unless params[:ratings].nil?
+    session[:sort] = params[:sort] unless params[:sort].nil?
+    
     if !params[:ratings].nil?
       return @movies = Movie.with_ratings(params[:ratings].keys)
     else
