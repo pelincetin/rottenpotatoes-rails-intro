@@ -13,9 +13,9 @@ class MoviesController < ApplicationController
     session[:sort] = params[:sort] unless params[:sort].nil?
     
     if !params[:ratings].nil?
-      return @movies = Movie.with_ratings(params[:ratings].keys)
+      return @movies = Movie.with_ratings(params[:ratings].keys).order(session[:sort])
     else
-      return @movies = Movie.all
+      return @movies = Movie.all.order(session[:sort])
     end
   end
 
