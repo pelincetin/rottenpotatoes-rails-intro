@@ -12,6 +12,8 @@ class MoviesController < ApplicationController
     session[:ratings] = params[:ratings] unless params[:ratings].nil?
     session[:sort] = params[:sort] unless params[:sort].nil?
     
+    if session[:sort] == 'title'
+        @title_header = hilite
     if !params[:ratings].nil?
       return @movies = Movie.with_ratings(params[:ratings].keys).order(session[:sort])
     else
