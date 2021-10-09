@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     session[:sort] = params[:sort] unless params[:sort].nil?
     
     if session[:sort] == 'title'
-        @title_styling = hilite
+        @title_styling = 'hilite'
     if !params[:ratings].nil?
       return @movies = Movie.with_ratings(params[:ratings].keys).order(session[:sort])
     else
