@@ -18,7 +18,7 @@ Include:
     <tr>
       <th><%= link_to 'Movie Title', movies_path(sort: 'title'), id: 'title_header', class: @title_styling %></th>
       <th>Rating</th>
-      <th class="text-primary"><%= link_to 'Release Date', movies_path(sort: 'release_date'), id:'release_date_header'%></th>
+      <th class="text-primary"><%= link_to 'Release Date', movies_path(sort: 'release_date'), id:'release_date_header', class: @release_styling %></th>
       <th>More Info</th>
     </tr>
   </thead>
