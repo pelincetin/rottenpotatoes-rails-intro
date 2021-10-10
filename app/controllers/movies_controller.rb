@@ -10,12 +10,10 @@ class MoviesController < ApplicationController
     @all_ratings = Movie.all_ratings
      = []
     session[:ratings] = params[:ratings] unless params[:ratings].nil?
-    session[:sort] = params[:sort] unless params[:sort].nil?
-    @ratings_to_show = session[:sort]
+    @ratings_to_show = session[:sort] || params[:sort] ||{}
     if @ratings_to_show.nil?
         @ratings_to_show = Hash[@all_ratings.map {|rating| [rating, 1]}]
     end
-    
     
     if params[:sort] == 'title'
         @title_styling = 'hilite'
