@@ -8,4 +8,4 @@ To start working on the Rails Intro homework, please follow [the instructions](i
 
 -----------
 
-<img src="https://github.com/pelincetin/rottenpotatoes-rails-intro/blob/main/layout.png" width="400"/> 
+<img src="https://github.com/pelincetin/rottenpotatoes-rails-intro/blob/master/layout.png" width="400"/> 
